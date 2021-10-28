@@ -33,6 +33,6 @@ app.use((err,req,res,next)=>{
     res.status(500).send("something is broken on server!!!!!!!!!!!!!")
 })
 
-app.listen(5000,()=>{
-    console.log('server is runnimg on port 5000 ...')
+app.listen(5050,()=>{
+    console.log('server is runnimg on port 5050 ...')
 })
