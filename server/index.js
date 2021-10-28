@@ -6,7 +6,7 @@ var mongoose = require('mongoose')
 var routes = require('./src/routes')
 
 var corsOptions = {
-    origin:'http://localhost:3000',
+    origin:'*',   //'http://localhost:3000',
     credentials:true
 }
 const CONNECT_URL = 'mongodb://localhost:27017/yuminbc'
@@ -34,5 +34,5 @@ app.use((err,req,res,next)=>{
 })
 
 app.listen(5050,()=>{
-    console.log('server is runnimg on port 5050 ...')
+    console.log('server is running on port 5050 ...')
 })

@@ -36,14 +36,14 @@ BookRouter.post('/',(req,res)=>{
 })
 
 BookRouter.put('/:id',(req,res)=>{
-    Book.findByidAndUpdate(req.params.id, req.booy,{new:true},(err,todo)=>{
+    Book.findByIdAndUpdate(req.params.id, req.body,{new:true},(err,book)=>{
         if(err) throw err;
         res.json({status:204,msg: `book ${req.params.id} updated in db !`,book})
     })
 })
 
 BookRouter.delete('/:id',(req,res)=>{
-    Book.findByidAndRemove(req.params.id,(err,book)=>{
+    Book.findByIdAndRemove(req.params.id,(err,book)=>{
         if(err) throw err;
         res.json({status:204,msg:`book ${req.params.id} removed in db!`})
     })
